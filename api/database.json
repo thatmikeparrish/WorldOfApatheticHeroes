@@ -1,0 +1,122 @@
+{
+  "users": [
+    {
+      "accountName": "raccscout",
+      "email": "mparrish615@gmail.com",
+      "password": "12345",
+      "id": 1
+    }
+  ],
+  "characters": [],
+  "races": [
+    {
+      "id": 1,
+      "name": "High Elf",
+      "description": "WORDS"
+    },
+    {
+      "id": 2,
+      "name": "Human",
+      "description": "WORDS"
+    },
+    {
+      "id": 3,
+      "name": "Dwarf",
+      "description": "WORDS"
+    },
+    {
+      "id": 4,
+      "name": "Gnome",
+      "description": "WORDS"
+    },
+    {
+      "id": 5,
+      "name": "Dark Elf",
+      "description": "WORDS"
+    },
+    {
+      "id": 6,
+      "name": "Orc",
+      "description": "WORDS"
+    },
+    {
+      "id": 7,
+      "name": "Goblin",
+      "description": "WORDS"
+    },
+    {
+      "id": 8,
+      "name": "Minotaur",
+      "description": "WORDS"
+    }
+  ],
+  "classes": [
+    {
+      "id": 1,
+      "name": "Warrior",
+      "description": "WORDS"
+    },
+    {
+      "id": 2,
+      "name": "Paladin",
+      "description": "WORDS"
+    },
+    {
+      "id": 3,
+      "name": "Priest",
+      "description": "WORDS"
+    },
+    {
+      "id": 4,
+      "name": "Skull Knight",
+      "description": "WORDS"
+    },
+    {
+      "id": 5,
+      "name": "Sorcerer",
+      "description": "WORDS"
+    },
+    {
+      "id": 6,
+      "name": "Sage",
+      "description": "WORDS"
+    },
+    {
+      "id": 7,
+      "name": "Rogue",
+      "description": "WORDS"
+    },
+    {
+      "id": 8,
+      "name": "Hunter",
+      "description": "WORDS"
+    }
+  ],
+  "difficulty": [
+    {
+      "id": 1,
+      "name": "east",
+      "description": "WORDS"
+    },
+    {
+      "id": 2,
+      "name": "normal",
+      "description": "WORDS"
+    },
+    {
+      "id": 3,
+      "name": "hard",
+      "description": "WORDS"
+    },
+    {
+      "id": 4,
+      "name": "heroic",
+      "description": "WORDS"
+    },
+    {
+      "id": 5,
+      "name": "mythic",
+      "description": "WORDS"
+    }
+  ]
+}
