@@ -2,7 +2,7 @@
     width: 100%;
     height: 58.95rem;
     background-color: darkred;
-    padding: 1rem;
+    padding: 2rem 6rem 2rem 6rem;
 }
 
 .characterListBackground {
@@ -17,4 +17,38 @@
     height: 50rem;
     background-color: dimgray;
     margin-bottom: 1rem;
+}
+
+.leftSide {
+    width: 85rem;
+    height: 55rem;
+    /* border: solid black 3px; */
+}
+
+.leftTop {
+    /* border: solid black 3px; */
+    height: 45rem;
+}
+
+.leftBottom {
+    /* border: solid black 3px; */
+    height: 9.6rem;
+}
+
+.leftBottomLeft{
+    margin: .5rem .5rem .5rem .5rem;
+    padding: .7rem 0 .7rem 0;
+}
+
+.optionBtn{
+    margin: .5rem;
+}
+
+.leftBottomRight{
+    margin: auto;
+}
+
+.playButton {
+    height: 8rem;
+    width: 20rem;
 }

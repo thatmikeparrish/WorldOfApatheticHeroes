@@ -5,7 +5,8 @@ import APIManager from '../modules/APIManager'
 
 import Login from './Login/loginForm'
 import Dashboard from './Dashboard/Dashboard'
-import Registration from "./Registration/Registration";
+import Registration from "./Registration/Registration"
+import NewCharacter from './Characters/NewCharacter'
 
 
 export default class ApplicationViews  extends Component {
@@ -14,8 +15,10 @@ export default class ApplicationViews  extends Component {
     
     state = {
         user: {},
-        login: true,
-        users: {}
+        users: {},
+        races: [],
+        classes: [],
+        characters: []
     }
     
     componentDidMount() {
@@ -23,6 +26,12 @@ export default class ApplicationViews  extends Component {
         newState.user = JSON.parse(sessionStorage.getItem("user")) || {};
         APIManager.getAll("users")
         .then(users => newState.users = users)
+        .then(() => APIManager.getAll("races"))
+        .then(races => newState.races = races)
+        .then(() => APIManager.getAll("classes"))
+        .then(classes => newState.classes = classes)
+        .then(() => APIManager.getAll("characters"))
+        .then(characters => newState.characters = characters)
         .then(() => {
             this.setState(newState)
         })
@@ -58,7 +67,19 @@ export default class ApplicationViews  extends Component {
                 }} />
 
                 <Route exact path="/dashboard" render={(props) => {
-                    return <Dashboard {...props} />
+                    if (this.isAuthenticated()) {
+                        return <Dashboard {...props} characters={this.state.characters}/>
+                    }else {
+                        return <Redirect to="/login" />
+                    }
+                }} />
+
+                <Route exact path="/new-character" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        return <NewCharacter {...props} post={this.post} races={this.state.races} classes={this.state.classes}/>
+                    }else {
+                        return <Redirect to="/login" />
+                    }
                 }} />
 
             </React.Fragment>

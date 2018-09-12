@@ -7,7 +7,26 @@
       "id": 1
     }
   ],
-  "characters": [],
+  "characters": [
+    {
+      "name": "raccscout",
+      "raceID": 2,
+      "classID": 2,
+      "id": 1
+    },
+    {
+      "name": "raccshot",
+      "raceID": 5,
+      "classID": 8,
+      "id": 2
+    },
+    {
+      "name": "Deathracc",
+      "raceID": 3,
+      "classID": 4,
+      "id": 3
+    }
+  ],
   "races": [
     {
       "id": 1,
@@ -95,7 +114,7 @@
   "difficulty": [
     {
       "id": 1,
-      "name": "east",
+      "name": "easy",
       "description": "WORDS"
     },
     {
