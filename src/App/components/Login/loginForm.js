@@ -20,10 +20,13 @@ export default class Login extends Component {
         e.preventDefault();
         APIManager.getAll("users")
         .then(users => {
-            let emailExists = users.find(u => u.email === this.state.email);
-            if(emailExists){
-                sessionStorage.setItem("user", JSON.stringify(emailExists))
+            let email = users.find(u => u.email === this.state.email);
+            let password = users.find(u => u.password === this.state.password);
+            if(email && password){
+                sessionStorage.setItem("user", JSON.stringify(email, password))
                 this.props.history.push("/dashboard")
+            } else {
+                window.alert("You have entered an incorrect email or password!")
             }
         })
     }
@@ -37,11 +40,11 @@ export default class Login extends Component {
             <div className="login">
                 <form className="loginForm" onSubmit={this.handleLogin}>
                     <h1 className="">Please sign in</h1>
-                    <input className="" onChange={this.handleFieldChange} type="email" id="email" placeholder="Email" />
-                    <input className="" onChange={this.handleFieldChange} type="password" id="password" placeholder="Password" />
-                    <button className="loginSubmit" type="submit">Sign in</button>
+                    <input onChange={this.handleFieldChange} type="email" id="email" placeholder="Email" />
+                    <input onChange={this.handleFieldChange} type="password" id="password" placeholder="Password" />
+                    <button className="loginSubmit btn" type="submit">Sign in</button>
                 </form>
-                <button className="newAccount" type="other" onClick={this.registerNewAccount}>Register</button>
+                <button className="newAccount btn" type="other" onClick={this.registerNewAccount}>Register</button>
             </div>
         )
     }
