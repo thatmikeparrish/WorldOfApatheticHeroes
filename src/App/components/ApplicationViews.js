@@ -65,7 +65,7 @@ export default class ApplicationViews  extends Component {
 
                 <Route exact path="/dashboard" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <Dashboard {...props} />
+                        return <Dashboard {...props} races={this.state.races} classes={this.state.classes}/>
                     }else {
                         return <Redirect to="/login" />
                     }
