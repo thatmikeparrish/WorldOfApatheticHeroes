@@ -36,7 +36,7 @@ export default class Dashboard extends Component {
                 <div className="rightSide">
                     <div className="characterListBackground d-flex flex-column">
                         <div className="characterList">
-                            <CharacterList characters={this.props.characters}/>
+                            <CharacterList user={this.props.user} characters={this.props.characters}/>
                         </div>
                         <div className="d-flex justify-content-center">
                             <button className="btn" onClick={this.addCharacter}>Add New Character</button>

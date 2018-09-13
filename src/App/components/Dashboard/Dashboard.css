@@ -1,19 +1,19 @@
 .dashboard {
     width: 100%;
-    height: 58.95rem;
+    height: 100vh;
     background-color: darkred;
-    padding: 2rem 6rem 2rem 6rem;
+    padding: 3.2rem;
 }
 
 .characterListBackground {
-    width: 25rem;
+    width: 16rem;
     height: 55rem;
     background-color: darkcyan;
     padding: 1rem;
 }
 
 .characterList {
-    width: 23rem;
+    width: 14rem;
     height: 50rem;
     background-color: dimgray;
     margin-bottom: 1rem;

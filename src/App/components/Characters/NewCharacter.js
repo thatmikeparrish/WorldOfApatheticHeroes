@@ -25,7 +25,7 @@ export default class NewCharacter extends Component {
                 name: this.state.name,
                 raceID: this.props.races.find(a => a.name === this.state.race).id,
                 classID: this.props.classes.find(e => e.name === this.state.class).id,
-                //userId: this.props.user.id
+                userID: this.props.user.id
             }
 
             this.props.post("characters", character).then(() => this.props.history.push("/dashboard"))

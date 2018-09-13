@@ -5,6 +5,12 @@
       "email": "mparrish615@gmail.com",
       "password": "12345",
       "id": 1
+    },
+    {
+      "accountName": "mellven",
+      "email": "sh@sh.com",
+      "password": "test",
+      "id": 2
     }
   ],
   "characters": [
@@ -12,19 +18,36 @@
       "name": "raccscout",
       "raceID": 2,
       "classID": 2,
+      "userID": 1,
       "id": 1
     },
     {
       "name": "raccshot",
       "raceID": 5,
       "classID": 8,
+      "userID": 1,
       "id": 2
     },
     {
       "name": "Deathracc",
       "raceID": 3,
       "classID": 4,
+      "userID": 1,
       "id": 3
+    },
+    {
+      "name": "stabracc",
+      "raceID": 1,
+      "classID": 7,
+      "userID": 1,
+      "id": 4
+    },
+    {
+      "name": "Zappyboi",
+      "raceID": 7,
+      "classID": 6,
+      "userID": 2,
+      "id": 5
     }
   ],
   "races": [
@@ -60,7 +83,7 @@
     },
     {
       "id": 7,
-      "name": "Goblin",
+      "name": "Troll",
       "description": "WORDS"
     },
     {
