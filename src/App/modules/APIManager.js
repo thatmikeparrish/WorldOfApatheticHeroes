@@ -27,8 +27,7 @@ export default Object.create(null, {
             })
             .then(e => e.json())
             .then(() => fetch(`${remoteURL}/${resources}`))
-            .then(e => e.json())
-            
+            .then(e => e.json()) 
         }
     },
     post: {

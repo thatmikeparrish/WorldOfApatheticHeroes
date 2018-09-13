@@ -8,6 +8,7 @@
 
 .cardRight { 
     width: 30%;
+    margin: .5rem .5rem .5rem 0;
 }
 
 .deleteBtn {

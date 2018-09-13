@@ -17,7 +17,7 @@ export default class CharactersList extends Component {
                     <div className="characterDeck">
                         {
                             this.props.characters.map(character =>
-                                <CharacterCard key={character.id} character={character} {...this.props} races={this.props.races} classes={this.props.classes} />
+                                <CharacterCard key={character.id} character={character} {...this.props} delete={this.props.delete} races={this.props.races} classes={this.props.classes} />
                             )
                         }
                     </div>
