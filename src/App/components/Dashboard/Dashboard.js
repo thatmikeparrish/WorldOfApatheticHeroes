@@ -1,12 +1,29 @@
 import React, { Component } from "react"
 import './Dashboard.css'
 import CharacterList from '../Characters/CharacterList'
+import APIManager from '../../modules/APIManager'
 
 
 export default class Dashboard extends Component {
 
+    state ={
+        user: null,
+        characters: []
+    }
+
+    componentDidMount() {
+        let newState = {};
+        let user = JSON.parse(sessionStorage.getItem("user"));
+        this.setState({user})
+        APIManager.getAllCharactersByUserID(user.id, "characters")
+        .then(characters => {newState.characters = characters})
+        .then(() => {
+            this.setState(newState)
+        })
+    }
+
     logoutButton = () => {
-        sessionStorage.removeItem("user");
+        sessionStorage.removeItem("user")
         this.props.history.push("/")
     }
 
@@ -36,7 +53,7 @@ export default class Dashboard extends Component {
                 <div className="rightSide">
                     <div className="characterListBackground d-flex flex-column">
                         <div className="characterList">
-                            <CharacterList user={this.props.user} characters={this.props.characters}/>
+                            <CharacterList user={this.state.user} characters={this.state.characters}/>
                         </div>
                         <div className="d-flex justify-content-center">
                             <button className="btn" onClick={this.addCharacter}>Add New Character</button>
