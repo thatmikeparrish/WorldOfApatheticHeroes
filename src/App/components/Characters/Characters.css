@@ -1,0 +1,19 @@
+.characterCard {
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.cardLeft {
+    width: 80%;
+}
+
+.cardRight { 
+    width: 20%;
+}
+
+.deleteBtn {
+    background-image: url(./img/redTrashCan.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+}

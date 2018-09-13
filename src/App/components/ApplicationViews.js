@@ -14,7 +14,7 @@ export default class ApplicationViews  extends Component {
     isAuthenticated = () => sessionStorage.getItem("user") !== null
     
     state = {
-        user: {},
+        user: JSON.parse(sessionStorage.getItem("user")) || {},
         users: {},
         races: [],
         classes: [],
@@ -23,15 +23,12 @@ export default class ApplicationViews  extends Component {
     
     componentDidMount() {
         let newState = {};
-        newState.user = JSON.parse(sessionStorage.getItem("user")) || {};
         APIManager.getAll("users")
         .then(users => newState.users = users)
         .then(() => APIManager.getAll("races"))
         .then(races => newState.races = races)
         .then(() => APIManager.getAll("classes"))
         .then(classes => newState.classes = classes)
-        .then(() => APIManager.getAll("characters"))
-        .then(characters => newState.characters = characters)
         .then(() => {
             this.setState(newState)
         })
@@ -68,7 +65,7 @@ export default class ApplicationViews  extends Component {
 
                 <Route exact path="/dashboard" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <Dashboard {...props} characters={this.state.characters}/>
+                        return <Dashboard {...props} />
                     }else {
                         return <Redirect to="/login" />
                     }
@@ -76,7 +73,7 @@ export default class ApplicationViews  extends Component {
 
                 <Route exact path="/new-character" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <NewCharacter {...props} post={this.post} races={this.state.races} classes={this.state.classes}/>
+                        return <NewCharacter {...props} post={this.post} user={this.state.user} races={this.state.races} classes={this.state.classes}/>
                     }else {
                         return <Redirect to="/login" />
                     }

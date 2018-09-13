@@ -5,9 +5,10 @@ import CharacterCard from './CharacterCard'
 
 
 export default class CharactersList extends Component {
-    render() {
-        const ThisAccountCharacters = this.props.characters.filter(character => character.userID !== true)
 
+    render() {
+        //console.log("Current User ID", this.props.user.id)
+        // const filteredCharacters = this.props.characters.filter(character => character.userID === this.props.user.id)
 
         return (
             <React.Fragment>
@@ -15,7 +16,7 @@ export default class CharactersList extends Component {
                 <div className="characterList">
                     <div className="characterDeck">
                         {
-                            ThisAccountCharacters.map(character =>
+                            this.props.characters.map(character =>
                                 <CharacterCard key={character.id} character={character} {...this.props} />
                             )
                         }
