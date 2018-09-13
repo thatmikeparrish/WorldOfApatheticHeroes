@@ -31,6 +31,11 @@ export default class Dashboard extends Component {
         this.props.history.push("/new-character")
     }
 
+    delete = (resource, id) => {APIManager.delete(resource, id)
+        .then(() => APIManager.getAllCharactersByUserID(this.state.user.id, resource))
+        .then(returnObject => this.setState({[resource]: returnObject}))
+    }
+
     render() {
         return (
             <div className="dashboard d-flex">
@@ -53,7 +58,7 @@ export default class Dashboard extends Component {
                 <div className="rightSide">
                     <div className="characterListBackground d-flex flex-column">
                         <div className="characterList">
-                            <CharacterList user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes}/>
+                            <CharacterList delete={this.delete} user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes}/>
                         </div>
                         <div className="d-flex justify-content-center">
                             <button className="btn" onClick={this.addCharacter}>Add New Character</button>
