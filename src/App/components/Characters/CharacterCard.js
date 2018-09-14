@@ -2,23 +2,27 @@ import React, { Component } from "react"
 import "./Characters.css"
 
 export default class CharacterCard extends Component {
-    
+   
     render() {
 
-        // const matchedRace = this.props.races.find(race => race.id === this.props.character.raceID) || {}
+        //const matchedRace = this.props.races.find(race => race.id === this.props.character.raceID) || {}
         const matchedClass = this.props.classes.find(c => c.id === this.props.character.classID) || {}
 
+        //console.log(matchedRace.backgroundImage)
+        //console.log("herro", this.matchedRace.backgroundImage)
+        //onClick={() => this.props.changeBackground(this.matchedRace.backgroundImage)}
+
         return (
-            <div key={this.props.character.id} className="characterCard card d-flex flex-row">
+            <div key={this.props.character.id} className="characterCard card d-flex flex-row" >
                 <div className="cardLeft">
                     <div className="characterName">
                         <h5>{this.props.character.name}</h5>
                     </div>
                     <div className="characterClass">
-                        <h6>{/* matchedRace.name */} {matchedClass.name}</h6>
+                        <h6>Level {this.props.character.level} {matchedClass.name}</h6>
                     </div>
                 </div>
-                <button className="cardRight btn btn-danger" onClick={() => this.props.delete("characters", this.props.character.id)}><span roll="img">💀</span></button>
+                <button className="cardRight btn deleteBtn" onClick={() => this.props.delete("characters", this.props.character.id)}><span role="img" aria-label="Skull">💀</span></button>
             </div>
         )
     }

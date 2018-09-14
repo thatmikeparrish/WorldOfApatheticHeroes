@@ -1,20 +1,55 @@
+.characterCard:first-child {
+    margin: .4rem .4rem .4rem .4rem;
+    background-color: rgba(102, 102, 0, .7);
+    color: gold;
+    padding: .4rem 0 .4rem .4rem;
+    border: 0px;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 1px 1px #000;
+}
+
 .characterCard {
-    margin: 1rem 1rem 1rem 1rem;
+    margin: .4rem .4rem .4rem .4rem;
+    background-color: rgba(0, 0, 0, 0);
+    color: gold;
+    padding: .4rem 0 .4rem .4rem;
+    border: 0px;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 1px 1px #000;
+}
+
+.activeCharacterCard {
+    margin: .4rem .4rem .4rem .4rem;
+    background-color: rgba(102, 102, 0, .7);
+    color: gold;
+    padding-top: .4rem;
+    padding-left: .4rem;
+    border: 0px;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 1px 1px #000;
 }
 
 .cardLeft {
-    width: 70%;
+    width: 80%;
+    margin-top: 8px;
 }
 
 .cardRight { 
-    width: 30%;
+    width: 20%;
     margin: .5rem .5rem .5rem 0;
 }
 
 .deleteBtn {
-    background-image: url(./img/redTrashCan.png);
-    background-position: center;
-    background-size: cover;
     text-align: center;
+    border: 3px solid rgba(80, 80, 80, .9);
+    background-color: #790603;
+}
 
+.addCharacter {
+    border: 3px solid rgba(80, 80, 80, .9);
+    background-color: #790603;
+    color: gold;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 2px 2px #000;
+    margin-top: .5rem;
 }

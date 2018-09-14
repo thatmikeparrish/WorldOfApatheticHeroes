@@ -7,6 +7,7 @@ export default class NewCharacter extends Component {
         name: "",
         race: "",
         class: "",
+        level: "",
         userID: ""
     }
 
@@ -25,6 +26,7 @@ export default class NewCharacter extends Component {
                 name: this.state.name,
                 raceID: this.props.races.find(a => a.name === this.state.race).id,
                 classID: this.props.classes.find(e => e.name === this.state.class).id,
+                level: 1,
                 userID: this.props.user.id
             }
 
