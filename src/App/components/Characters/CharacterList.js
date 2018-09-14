@@ -5,6 +5,11 @@ import CharacterCard from './CharacterCard'
 
 
 export default class CharactersList extends Component {
+
+    /* activeCharacter = (el) => {
+        let characterCards = 0
+
+    } */
     
     render() {
         //console.log("Current User ID", this.props.user.id)
@@ -14,11 +19,13 @@ export default class CharactersList extends Component {
             <React.Fragment>
 
                 <div className="characterDeck">
+                    <div className="characters">
                     {
                         this.props.characters.map(character =>
                             <CharacterCard key={character.id} character={character} {...this.props} changeBackground={this.props.changeBackground} delete={this.props.delete} races={this.props.races} classes={this.props.classes} />
                         )
                     }
+                    </div>
                     {
                         (this.props.characters.length !== 10) ?
                             <div className="d-flex justify-content-center">

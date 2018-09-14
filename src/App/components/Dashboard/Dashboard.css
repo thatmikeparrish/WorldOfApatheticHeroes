@@ -8,10 +8,16 @@
 .rightSide {
     width: 25rem;
 }
+
+.characterDeck {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
 .characterList {
     width: 18rem;
-    min-height: 49.2rem;
-    max-height: 49.2rem;
+    min-height: 56rem;
+    max-height: 56rem;
     background-color: rgba(0, 0, 0, .4);
     border: 3px solid rgba(80, 80, 80, .9);
     border-radius: 10px;

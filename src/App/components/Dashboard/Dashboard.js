@@ -37,9 +37,9 @@ export default class Dashboard extends Component {
         .then(returnObject => this.setState({[resource]: returnObject}))
     }
 
-    changeBackground = (activeBackground) => {
+    /* changeBackground = (activeBackground) => {
         activeBackground => this.setState({[activeBackground]: activeBackground})
-    }
+    } */
 
     render() {
         return (
