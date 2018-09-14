@@ -1,20 +1,32 @@
 .characterCard {
-    margin: 1rem 1rem 1rem 1rem;
+    margin: .85rem .85rem .85rem .85rem;
+    background-color: rgba(0, 0, 0, 0);
+    color: gold;
+    padding-left: .4rem;
+    border: 0px;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 2px 2px #000;
 }
 
 .cardLeft {
-    width: 70%;
+    width: 80%;
 }
 
 .cardRight { 
-    width: 30%;
+    width: 20%;
     margin: .5rem .5rem .5rem 0;
 }
 
 .deleteBtn {
-    background-image: url(./img/redTrashCan.png);
-    background-position: center;
-    background-size: cover;
     text-align: center;
+    border: 3px solid rgba(80, 80, 80, .9);
+    background-color: #790603;
+}
 
+.addCharacter {
+    border: 3px solid rgba(80, 80, 80, .9);
+    background-color: #790603;
+    color: gold;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 2px 2px #000;
 }

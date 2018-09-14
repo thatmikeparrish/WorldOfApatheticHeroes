@@ -8,7 +8,8 @@ export default class Dashboard extends Component {
 
     state ={
         user: null,
-        characters: []
+        characters: [],
+        activeBackground: []
     }
 
     componentDidMount() {
@@ -36,6 +37,10 @@ export default class Dashboard extends Component {
         .then(returnObject => this.setState({[resource]: returnObject}))
     }
 
+    changeBackground = (activeBackground) => {
+        activeBackground => this.setState({[activeBackground]: activeBackground})
+    }
+
     render() {
         return (
             <div className="dashboard d-flex">
@@ -47,22 +52,18 @@ export default class Dashboard extends Component {
                     </div>
                     <div className="leftBottom d-flex">
                         <div className="leftBottomLeft d-flex flex-column">
-                            <button className="optionBtn btn">Account Info</button>
-                            <button type="button" className="optionBtn btn" onClick={this.logoutButton}>Logout</button>
+                            <button type="button" className="logoutBtn btn" onClick={this.logoutButton}>Logout</button>
                         </div>
                         <div className="leftBottomRight d-flex justify-content-center">
-                            <button className="playButton btn">Play</button>
+                            <button className="playButton btn">
+                                <h2>Play</h2>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div className="rightSide">
-                    <div className="characterListBackground d-flex flex-column">
-                        <div className="characterList">
-                            <CharacterList delete={this.delete} user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes}/>
-                        </div>
-                        <div className="d-flex justify-content-center">
-                            <button className="btn" onClick={this.addCharacter}>Add New Character</button>
-                        </div>
+                    <div className="characterList d-flex flex-column">
+                        <CharacterList addCharacter={this.addCharacter} delete={this.delete} user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes} changeBackground={this.changeBackground}/>
                     </div>
                 </div>
             </div>
