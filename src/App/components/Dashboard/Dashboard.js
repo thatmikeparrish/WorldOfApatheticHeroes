@@ -6,10 +6,10 @@ import APIManager from '../../modules/APIManager'
 
 export default class Dashboard extends Component {
 
-    state ={
+    state = {
         user: null,
         characters: [],
-        activeCharacter: []
+        activeCharacter: 0
     }
 
     componentDidMount() {
@@ -37,9 +37,43 @@ export default class Dashboard extends Component {
         .then(returnObject => this.setState({[resource]: returnObject}))
     }
 
+    makeActiveCharacter = (id) => {
+        console.log("active character", this.state.activeCharacter)
+        this.setState({activeCharacter: id})
+        
+    }
+
+    /* style = () => {
+        if(this.state.activeCharacter.raceID === 1) {
+            let style =  "human";
+            return style
+        }
+
+    } */
+
     render() {
+        let style = "dashboard d-flex"
+
+        if(this.state.activeCharacter.raceID === 1) {
+            style = "highElf d-flex";
+        } else if (this.state.activeCharacter.raceID === 2) {
+            style = "human d-flex"
+        } else if (this.state.activeCharacter.raceID === 3) {
+            style = "dwarf d-flex"
+        } else if (this.state.activeCharacter.raceID === 4) {
+            style = "gnome d-flex"
+        } else if (this.state.activeCharacter.raceID === 5) {
+            style = "darkElf d-flex"
+        } else if (this.state.activeCharacter.raceID === 6) {
+            style = "orc d-flex"
+        } else if (this.state.activeCharacter.raceID === 7) {
+            style = "troll d-flex"
+        } else if (this.state.activeCharacter.raceID === 8) {
+            style = "minotaur d-flex"
+        }
+
         return (
-            <div className="dashboard d-flex">
+            <div className={style}>
                 <div className="leftSide">
                     <div className="leftTop">
                         <div className="characterImage">
@@ -63,9 +97,9 @@ export default class Dashboard extends Component {
                 </div>
                 <div className="rightSide">
                     <div className="characterList d-flex flex-column">
-                        <CharacterList delete={this.delete} user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes} />
+                        <CharacterList delete={this.delete} user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes} makeActiveCharacter={this.makeActiveCharacter} activeCharacter={this.state.activeCharacter}/>
                         {
-                        (this.state.characters.length !== 10) ?
+                        (this.state.characters.length !== 9) ?
                             <div className="d-flex justify-content-center">
                                 <div className="btnBackground">
                                     <button className="btn addCharacter" onClick={this.addCharacter}>Create New Character</button>

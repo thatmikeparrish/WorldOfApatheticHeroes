@@ -41,8 +41,7 @@
     margin: .4rem .4rem .4rem .4rem;
     background-color: rgba(255, 215, 0, .6);
     color: gold;
-    padding-top: .4rem;
-    padding-left: .4rem;
+    padding: .4rem 0 .4rem .4rem;
     border: 0px;
     font-family: 'Metamorphous', cursive;
     text-shadow: 2px 2px #000;
