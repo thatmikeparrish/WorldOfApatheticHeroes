@@ -19,16 +19,16 @@ export default class Login extends Component {
     handleLogin = (e) => {
         e.preventDefault();
         APIManager.getAll("users")
-        .then(users => {
-            let email = users.find(u => u.email === this.state.email);
-            let password = users.find(u => u.password === this.state.password);
-            if(email && password){
-                sessionStorage.setItem("user", JSON.stringify(email, password))
-                this.props.history.push("/dashboard")
-            } else {
-                window.alert("You have entered an incorrect email or password!")
-            }
-        })
+            .then(users => {
+                let email = users.find(u => u.email === this.state.email);
+                let password = users.find(u => u.password === this.state.password);
+                if (email && password) {
+                    sessionStorage.setItem("user", JSON.stringify(email, password))
+                    this.props.history.push("/dashboard")
+                } else {
+                    window.alert("You have entered an incorrect email or password!")
+                }
+            })
     }
 
     registerNewAccount = () => {
@@ -38,13 +38,20 @@ export default class Login extends Component {
     render() {
         return (
             <div className="login">
-                <form className="loginForm" onSubmit={this.handleLogin}>
-                    <h1 className="">Please sign in</h1>
-                    <input onChange={this.handleFieldChange} type="email" id="email" placeholder="Email" />
-                    <input onChange={this.handleFieldChange} type="password" id="password" placeholder="Password" />
-                    <button className="loginSubmit btn" type="submit">Sign in</button>
-                </form>
-                <button className="newAccount btn" type="other" onClick={this.registerNewAccount}>Register</button>
+                <div className="formArea container d-flex flex-column">
+                    <h1 className="gameTitle">World Of Apathetic Heroes</h1>
+                    <form className="loginForm d-flex flex-column justify-content-center" onSubmit={this.handleLogin}>
+                        <input className="formField" onChange={this.handleFieldChange} type="email" id="email" placeholder="Email" />
+                        <br></br>
+                        <input className="formField" onChange={this.handleFieldChange} type="password" id="password" placeholder="Password" />
+                        <div className="loginBtn btnBackground">
+                            <button className="gameBtn btn" type="submit">Login</button>
+                        </div>
+                    </form>
+                    <div className="registerBtn btnBackground">
+                        <button className="gameBtn btn" type="button" onClick={this.registerNewAccount}>Create Account</button>
+                    </div>
+                </div>
             </div>
         )
     }

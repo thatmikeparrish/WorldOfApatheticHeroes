@@ -9,7 +9,7 @@ export default class Dashboard extends Component {
     state ={
         user: null,
         characters: [],
-        activeBackground: []
+        activeCharacter: []
     }
 
     componentDidMount() {
@@ -37,10 +37,6 @@ export default class Dashboard extends Component {
         .then(returnObject => this.setState({[resource]: returnObject}))
     }
 
-    /* changeBackground = (activeBackground) => {
-        activeBackground => this.setState({[activeBackground]: activeBackground})
-    } */
-
     render() {
         return (
             <div className="dashboard d-flex">
@@ -52,18 +48,33 @@ export default class Dashboard extends Component {
                     </div>
                     <div className="leftBottom d-flex">
                         <div className="leftBottomLeft d-flex flex-column">
-                            <button type="button" className="logoutBtn btn" onClick={this.logoutButton}>Logout</button>
+                            <div className="btnBackground">
+                                <button type="button" className="logoutBtn btn" onClick={this.logoutButton}>Logout</button>
+                            </div>
                         </div>
                         <div className="leftBottomRight d-flex justify-content-center">
-                            <button className="playButton btn">
-                                <h2>Play</h2>
-                            </button>
+                            <div className="btnBackground">
+                                <button className="playButton btn">
+                                    <h2>Play</h2>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="rightSide">
                     <div className="characterList d-flex flex-column">
-                        <CharacterList addCharacter={this.addCharacter} delete={this.delete} user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes} changeBackground={this.changeBackground}/>
+                        <CharacterList delete={this.delete} user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes} />
+                        {
+                        (this.state.characters.length !== 10) ?
+                            <div className="d-flex justify-content-center">
+                                <div className="btnBackground">
+                                    <button className="btn addCharacter" onClick={this.addCharacter}>Create New Character</button>
+                                </div>
+                            </div>
+
+                        :
+                            <div></div>
+                        }
                     </div>
                 </div>
             </div>

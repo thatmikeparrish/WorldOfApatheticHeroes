@@ -55,52 +55,44 @@
       "id": 5
     },
     {
-      "name": "t5",
-      "raceID": 3,
-      "classID": 2,
+      "name": "awd",
+      "raceID": 5,
+      "classID": 1,
       "level": 1,
       "userID": 1,
       "id": 6
     },
     {
-      "name": "t6",
-      "raceID": 6,
-      "classID": 7,
+      "name": "erte",
+      "raceID": 4,
+      "classID": 3,
       "level": 1,
       "userID": 1,
       "id": 7
     },
     {
-      "name": "t7",
-      "raceID": 5,
-      "classID": 4,
+      "name": "tyutyu",
+      "raceID": 4,
+      "classID": 5,
       "level": 1,
       "userID": 1,
       "id": 8
     },
     {
-      "name": "t8",
-      "raceID": 8,
-      "classID": 8,
+      "name": "rtyrtyy",
+      "raceID": 4,
+      "classID": 6,
       "level": 1,
       "userID": 1,
       "id": 9
     },
     {
-      "name": "t10",
-      "raceID": 7,
-      "classID": 2,
+      "name": "fghfghdfg",
+      "raceID": 8,
+      "classID": 4,
       "level": 1,
       "userID": 1,
-      "id": 11
-    },
-    {
-      "name": "asdas",
-      "raceID": 5,
-      "classID": 6,
-      "level": 1,
-      "userID": 1,
-      "id": 12
+      "id": 10
     }
   ],
   "races": [
@@ -156,13 +148,13 @@
   "classes": [
     {
       "id": 1,
-      "name": "Warrior",
+      "name": "Gladiator",
       "description": "WORDS",
       "classColor": "#C79C6E"
     },
     {
       "id": 2,
-      "name": "Paladin",
+      "name": "Crusader",
       "description": "WORDS",
       "classColor": "#F58CBA"
     },
@@ -174,7 +166,7 @@
     },
     {
       "id": 4,
-      "name": "Death Knight",
+      "name": "Necromancer",
       "description": "WORDS",
       "classColor": "#C41F3B"
     },
@@ -186,19 +178,19 @@
     },
     {
       "id": 6,
-      "name": "Sage",
+      "name": "Witch Doctor",
       "description": "WORDS",
       "classColor": "#0070DE"
     },
     {
       "id": 7,
-      "name": "Rogue",
+      "name": "Pirate",
       "description": "WORDS",
       "classColor": "#FFF569"
     },
     {
       "id": 8,
-      "name": "Hunter",
+      "name": "Archer",
       "description": "WORDS",
       "classColor": "#ABD473"
     }

@@ -1,13 +1,3 @@
-.characterCard:first-child {
-    margin: .4rem .4rem .4rem .4rem;
-    background-color: rgba(102, 102, 0, .7);
-    color: gold;
-    padding: .4rem 0 .4rem .4rem;
-    border: 0px;
-    font-family: 'Metamorphous', cursive;
-    text-shadow: 1px 1px #000;
-}
-
 .characterCard {
     margin: .4rem .4rem .4rem .4rem;
     background-color: rgba(0, 0, 0, 0);
@@ -15,41 +5,88 @@
     padding: .4rem 0 .4rem .4rem;
     border: 0px;
     font-family: 'Metamorphous', cursive;
-    text-shadow: 1px 1px #000;
+    text-shadow: 2px 2px #000;
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
-.activeCharacterCard {
+/* .characterCard:first-child {
     margin: .4rem .4rem .4rem .4rem;
-    background-color: rgba(102, 102, 0, .7);
+    background-color: rgba(255, 215, 0, .6);
+    color: gold;
+    padding: .4rem 0 .4rem .4rem;
+    border: 0px;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 2px 2px #000;
+    border: 3px solid rgba(102, 102, 0, .7);
+} */
+
+.characterCard:hover {
+    /* background-color: rgba(102, 102, 0, .7); */
+    border: 3px solid rgba(102, 102, 0, .7);
+}
+
+.characterCard:active {
+    margin: .4rem .4rem .4rem .4rem;
+    background-color: rgba(255, 215, 0, .6);
     color: gold;
     padding-top: .4rem;
     padding-left: .4rem;
     border: 0px;
     font-family: 'Metamorphous', cursive;
-    text-shadow: 1px 1px #000;
+    text-shadow: 2px 2px #000;
+    border: 3px solid rgba(102, 102, 0, .7);
+}
+
+.characterCardActive {
+    margin: .4rem .4rem .4rem .4rem;
+    background-color: rgba(255, 215, 0, .6);
+    color: gold;
+    padding-top: .4rem;
+    padding-left: .4rem;
+    border: 0px;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 2px 2px #000;
+    border: 3px solid rgba(102, 102, 0, .7);
 }
 
 .cardLeft {
-    width: 80%;
+    width: 90%;
     margin-top: 8px;
 }
 
 .cardRight { 
-    width: 20%;
+    width: 15%;
     margin: .5rem .5rem .5rem 0;
 }
 
 .deleteBtn {
     text-align: center;
-    border: 3px solid rgba(80, 80, 80, .9);
+    border: 3px solid rgba(0, 0, 0, .3);
     background-color: #790603;
+    width: 100%;
+    height: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+
+.deleteBtn:hover {
+    background-color: rgba(255, 215, 0, .2);
+    color: white;
 }
 
 .addCharacter {
-    border: 3px solid rgba(80, 80, 80, .9);
     background-color: #790603;
     color: gold;
     font-family: 'Metamorphous', cursive;
     text-shadow: 2px 2px #000;
-    margin-top: .5rem;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+
+.addCharacter:hover {
+    background-color: rgba(255, 215, 0, .2);
+    color: white;
 }

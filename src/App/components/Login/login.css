@@ -1,0 +1,65 @@
+.login {
+    background-image: url(./img/login.jpg);
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.btnBackground {
+    background-color: #790603;
+    border: 5px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+
+.gameBtn {
+    border: 3px solid rgba(80, 80, 80, .9);
+    background-color: #790603;
+    color: gold;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 2px 2px #000;
+    width: 100%;
+    border: 3px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+
+.gameBtn:hover {
+    background-color: rgba(255, 215, 0, .2);
+    color: white;
+}
+
+.formField {
+    margin: .4rem .4rem .4rem .4rem;
+    color: gold;
+    padding: .4rem 0 .4rem .4rem;
+    border: 0px;
+    font-family: 'Metamorphous', cursive;
+    /* text-shadow: 2px 2px #000; */
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, .4);
+    border: 3px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+
+}
+
+.formArea {
+    width: 25rem;
+    padding-top: 7rem;
+    
+}
+
+.loginBtn {
+    margin: 1rem 0 1rem 0;
+}
+
+.gameTitle {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    width: 25rem;
+    margin-bottom: 8rem;
+    color: darkgoldenrod;
+    text-shadow: 2px 2px #000;
+}
