@@ -1,7 +1,9 @@
 .dashboard {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-color: darkcyan;
+    /* background-color: darkcyan; */
+    background-image: url(./img/darkElfZone.jpg);
+    background-position: center;
     padding: 1rem 1rem 0 1rem;
 }
 
@@ -10,17 +12,21 @@
 }
 
 .characterDeck {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    min-height: 54rem;
 }
 
 .characterList {
-    width: 18rem;
-    min-height: 56rem;
-    max-height: 56rem;
+    width: 25rem;
+    min-height: 59.5rem;
+    max-height: 59.5rem;
     background-color: rgba(0, 0, 0, .4);
     border: 3px solid rgba(80, 80, 80, .9);
     border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
 }
 
 .leftSide {
@@ -31,7 +37,7 @@
 
 .leftTop {
     /* border: solid black 3px; */
-    height: 48.3rem;
+    height: 50rem;
 }
 
 .leftBottom {
@@ -41,7 +47,7 @@
 
 .leftBottomLeft{
     margin: .5rem .5rem .5rem .5rem;
-    padding: 2.6rem 0 2.6rem 0;
+    padding: 5.5rem 0 0 0;
     width: 10rem;
 }
 
@@ -50,17 +56,32 @@
 }
 
 .leftBottomRight{
-    margin: auto;
+    padding: 4rem 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnBackground {
+    background-color: #790603;
+    border: 5px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
 }
 
 .playButton {
     height: 5rem;
     width: 20rem;
-    border: 3px solid rgba(80, 80, 80, .9);
+    border: 3px solid rgba(0, 0, 0, .3);
     background-color: #790603;
     color: gold;
     font-family: 'Metamorphous', cursive;
     text-shadow: 2px 2px #000;
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+
+.playButton:hover {
+    background-color: rgba(255, 215, 0, .2);
+    color: white;
 }
 
 .logoutBtn {
@@ -69,4 +90,12 @@
     color: gold;
     font-family: 'Metamorphous', cursive;
     text-shadow: 2px 2px #000;
+    width: 100%;
+    border: 3px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+
+.logoutBtn:hover {
+    background-color: rgba(255, 215, 0, .2);
+    color: white;
 }
