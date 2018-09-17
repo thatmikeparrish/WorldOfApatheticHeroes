@@ -2,18 +2,27 @@ import React, { Component } from "react"
 import "./Characters.css"
 
 export default class CharacterCard extends Component {
-   
+
     render() {
 
         const matchedRace = this.props.races.find(race => race.id === this.props.character.raceID) || {}
         const matchedClass = this.props.classes.find(c => c.id === this.props.character.classID) || {}
 
-        //console.log(matchedRace.backgroundImage)
-        //console.log("herro", this.matchedRace.backgroundImage)
-        //onClick={() => this.props.changeBackground(this.matchedRace.backgroundImage)}
+        /* if(this.props.activeCharacter === this.props.character.id) {
+            console.log("Im active!", this.props.character.name)
+        } */
+
+        /* let activeChanges =  */
 
         return (
-            <div key={this.props.character.id} className="characterCard card d-flex flex-row" onClick={this.toggleClass}>
+            <div key={this.props.character.id} className=
+                        {
+                            (this.props.activeCharacter.id === this.props.character.id ?
+                            "characterCardActive card d-flex flex-row"
+                                :
+                            "characterCard card d-flex flex-row")
+                        }
+                    onClick={() => this.props.makeActiveCharacter(this.props.character)}>
                 <div className="cardLeft">
                     <div className="characterName">
                         <h5>{this.props.character.name}</h5>
@@ -23,7 +32,8 @@ export default class CharacterCard extends Component {
                     </div>
                 </div>
                 <div className="btnBackground cardRight">
-                    <button className="btn deleteBtn" onClick={() => this.props.delete("characters", this.props.character.id)}><span role="img" aria-label="Skull">💀</span></button>
+                    <button className="btn deleteBtn" 
+                        onClick={() => this.props.delete("characters", this.props.character.id)}><span role="img" aria-label="Skull">💀</span></button>
                 </div>
             </div>
         )

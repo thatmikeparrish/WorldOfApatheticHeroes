@@ -1,9 +1,65 @@
-.dashboard {
+.highElf {
+    background-image: url(./img/highElfZone.jpg);
+    background-position: center;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
-    /* background-color: darkcyan; */
+    padding: 1rem 1rem 0 1rem;
+}
+.human {
+    background-image: url(./img/humanZone.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem 1rem 0 1rem;
+}
+.dwarf {
+    background-image: url(./img/dwarfZone.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem 1rem 0 1rem;
+}
+.gnome {
+    background-image: url(./img/gnomeZone.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem 1rem 0 1rem;
+}
+.darkElf {
     background-image: url(./img/darkElfZone.jpg);
     background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem 1rem 0 1rem;
+}
+.orc {
+    background-image: url(./img/orcZone.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem 1rem 0 1rem;
+}
+.troll {
+    background-image: url(./img/trollZone.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem 1rem 0 1rem;
+}
+.minotaur {
+    background-image: url(./img/minotaurZone.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
     padding: 1rem 1rem 0 1rem;
 }
 
@@ -14,13 +70,13 @@
 .characterDeck {
     margin-top: .25rem;
     margin-bottom: .25rem;
-    min-height: 54rem;
+    min-height: 51rem;
 }
 
 .characterList {
     width: 25rem;
-    min-height: 59.5rem;
-    max-height: 59.5rem;
+    min-height: 56.5rem;
+    max-height: 56.5rem;
     background-color: rgba(0, 0, 0, .4);
     border: 3px solid rgba(80, 80, 80, .9);
     border-radius: 10px;
@@ -37,7 +93,7 @@
 
 .leftTop {
     /* border: solid black 3px; */
-    height: 50rem;
+    height: 47rem;
 }
 
 .leftBottom {
