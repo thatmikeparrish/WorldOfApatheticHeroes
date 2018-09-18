@@ -26,7 +26,7 @@
       "name": "raccshot",
       "raceID": 5,
       "classID": 8,
-      "level": 1,
+      "level": 10,
       "userID": 1,
       "id": 2
     },
@@ -85,14 +85,6 @@
       "level": 1,
       "userID": 1,
       "id": 9
-    },
-    {
-      "name": "fghfghdfg",
-      "raceID": 8,
-      "classID": 4,
-      "level": 1,
-      "userID": 1,
-      "id": 10
     }
   ],
   "races": [
@@ -160,7 +152,7 @@
     },
     {
       "id": 3,
-      "name": "Priest",
+      "name": "Cleric",
       "description": "WORDS",
       "classColor": "#FFFFFF"
     },
@@ -190,7 +182,7 @@
     },
     {
       "id": 8,
-      "name": "Archer",
+      "name": "Ranger",
       "description": "WORDS",
       "classColor": "#ABD473"
     }

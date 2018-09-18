@@ -3,6 +3,15 @@ import './Dashboard.css'
 import CharacterList from '../Characters/CharacterList'
 import APIManager from '../../modules/APIManager'
 
+import gladiator from '../Characters/img/gladiator.png'
+import crusader from '../Characters/img/crusader.png'
+import cleric from '../Characters/img/cleric.png'
+import necromancer from '../Characters/img/necromancer.png'
+import sorcerer from '../Characters/img/sorcerer.png'
+import witchDoctor from '../Characters/img/witchDoctor.png'
+import pirate from '../Characters/img/pirate.png'
+import ranger from '../Characters/img/ranger.png'
+
 
 export default class Dashboard extends Component {
 
@@ -38,18 +47,10 @@ export default class Dashboard extends Component {
     }
 
     makeActiveCharacter = (id) => {
-        console.log("active character", this.state.activeCharacter)
+        // console.log("active character", this.state.activeCharacter)
         this.setState({activeCharacter: id})
         
     }
-
-    /* style = () => {
-        if(this.state.activeCharacter.raceID === 1) {
-            let style =  "human";
-            return style
-        }
-
-    } */
 
     render() {
         let style = "dashboard d-flex"
@@ -72,13 +73,40 @@ export default class Dashboard extends Component {
             style = "minotaur d-flex"
         }
 
+        let classImage = ""
+        let className = ""
+
+        if(this.state.activeCharacter.classID === 1) {
+            classImage = gladiator
+            className = "gladiator"
+        } else if (this.state.activeCharacter.classID === 2) {
+            classImage = crusader
+            className = "crusader"
+        } else if (this.state.activeCharacter.classID === 3) {
+            classImage = cleric
+            className = "cleric"
+        } else if (this.state.activeCharacter.classID === 4) {
+            classImage = necromancer
+            className = "necromancer"
+        } else if (this.state.activeCharacter.classID === 5) {
+            classImage = sorcerer
+            className = "sorcerer"
+        } else if (this.state.activeCharacter.classID === 6) {
+            classImage = witchDoctor
+            className = "witchDoctor"
+        } else if (this.state.activeCharacter.classID === 7) {
+            classImage = pirate
+            className = "pirate"
+        } else if (this.state.activeCharacter.classID === 8) {
+            classImage = ranger
+            className = "ranger"
+        }
+
         return (
             <div className={style}>
                 <div className="leftSide">
-                    <div className="leftTop">
-                        <div className="characterImage">
-                            <p>Character</p>
-                        </div>
+                    <div className="leftTop d-flex justify-content-center">
+                        <img className={className} src={classImage} />
                     </div>
                     <div className="leftBottom d-flex">
                         <div className="leftBottomLeft d-flex flex-column">
