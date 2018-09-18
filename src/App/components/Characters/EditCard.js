@@ -6,6 +6,12 @@ export default class CharacterCard extends Component {
         cardEdit: false
     }
 
+    editCharacterCard = () => {
+        this.setState({
+            cardEdit: true,
+        })
+    }
+
     toggle = () => {
         this.setState({
             cardEdit: !this.state.cardEdit,
@@ -18,7 +24,7 @@ export default class CharacterCard extends Component {
         const matchedClass = this.props.classes.find(c => c.id === this.props.character.classID) || {}
 
         return (
-            <div key={this.props.character.id} className="editCardBackground" onClick={this.toggle} >
+            <div key={this.props.character.id} className="editCardBackground">
                 <div className="btn editCard">
                     <div className="characterName">
                         {
@@ -38,7 +44,9 @@ export default class CharacterCard extends Component {
                                 <button onClick={this.toggle} className="btn characterNameBtn">Cancel</button>
                             </div>
                             :
-                            <div></div>
+                            <div className="btnBackground">
+                                <button onClick={this.toggle} className="btn editNameBtn">Change Name</button>
+                            </div>
                     }
                 </div>
             </div>
