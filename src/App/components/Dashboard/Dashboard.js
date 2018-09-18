@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import './Dashboard.css'
 import CharacterList from '../Characters/CharacterList'
+import EditCard from '../Characters/EditCard'
 import APIManager from '../../modules/APIManager'
 
 import gladiator from '../Characters/img/gladiator.png'
@@ -18,18 +19,19 @@ export default class Dashboard extends Component {
     state = {
         user: null,
         characters: [],
-        activeCharacter: 0
+        activeCharacter: 0,
+        edit: false
     }
 
     componentDidMount() {
         let newState = {};
         let user = JSON.parse(sessionStorage.getItem("user"));
-        this.setState({user})
+        this.setState({ user })
         APIManager.getAllCharactersByUserID(user.id, "characters")
-        .then(characters => {newState.characters = characters})
-        .then(() => {
-            this.setState(newState)
-        })
+            .then(characters => { newState.characters = characters })
+            .then(() => {
+                this.setState(newState)
+            })
     }
 
     logoutButton = () => {
@@ -41,21 +43,34 @@ export default class Dashboard extends Component {
         this.props.history.push("/new-character")
     }
 
-    delete = (resource, id) => {APIManager.delete(resource, id)
-        .then(() => APIManager.getAllCharactersByUserID(this.state.user.id, resource))
-        .then(returnObject => this.setState({[resource]: returnObject}))
+    editCharacters = () => {
+        this.setState({
+            edit: true,
+        })
+    }
+
+    cancelEditCharacter = () => {
+        this.setState({
+            edit: false,
+        })
+    }
+
+    delete = (resource, id) => {
+        APIManager.delete(resource, id)
+            .then(() => APIManager.getAllCharactersByUserID(this.state.user.id, resource))
+            .then(returnObject => this.setState({ [resource]: returnObject }))
     }
 
     makeActiveCharacter = (id) => {
         // console.log("active character", this.state.activeCharacter)
-        this.setState({activeCharacter: id})
-        
+        this.setState({ activeCharacter: id })
+
     }
 
     render() {
         let style = "dashboard d-flex"
 
-        if(this.state.activeCharacter.raceID === 1) {
+        if (this.state.activeCharacter.raceID === 1) {
             style = "highElf d-flex";
         } else if (this.state.activeCharacter.raceID === 2) {
             style = "human d-flex"
@@ -76,7 +91,7 @@ export default class Dashboard extends Component {
         let classImage = ""
         let className = ""
 
-        if(this.state.activeCharacter.classID === 1) {
+        if (this.state.activeCharacter.classID === 1) {
             classImage = gladiator
             className = "gladiator"
         } else if (this.state.activeCharacter.classID === 2) {
@@ -103,43 +118,95 @@ export default class Dashboard extends Component {
         }
 
         return (
-            <div className={style}>
-                <div className="leftSide">
-                    <div className="leftTop d-flex justify-content-center">
-                        <img className={className} src={classImage} />
-                    </div>
-                    <div className="leftBottom d-flex">
-                        <div className="leftBottomLeft d-flex flex-column">
-                            <div className="btnBackground">
-                                <button type="button" className="logoutBtn btn" onClick={this.logoutButton}>Logout</button>
-                            </div>
-                        </div>
-                        <div className="leftBottomRight d-flex justify-content-center">
-                            <div className="btnBackground">
-                                <button className="playButton btn">
-                                    <h2>Play</h2>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="rightSide">
-                    <div className="characterList d-flex flex-column">
-                        <CharacterList delete={this.delete} user={this.state.user} characters={this.state.characters} races={this.props.races} classes={this.props.classes} makeActiveCharacter={this.makeActiveCharacter} activeCharacter={this.state.activeCharacter}/>
-                        {
-                        (this.state.characters.length !== 9) ?
-                            <div className="d-flex justify-content-center">
-                                <div className="btnBackground">
-                                    <button className="btn addCharacter" onClick={this.addCharacter}>Create New Character</button>
+            <React.Fragment>
+                {
+                    (this.state.edit) ?
+
+                        <div className="CharacterEdit">
+                            <div className="cardMat">
+                                <div className="cardDeck d-flex justify-content-center flex-row flex-wrap">
+                                {
+                                    this.state.characters.map(character =>
+                                        <EditCard {...this.props}
+                                            key={character.id} 
+                                            character={character}  
+                                            delete={this.props.delete} 
+                                            races={this.props.races} 
+                                            classes={this.props.classes} 
+                                            activeCharacter={this.props.activeCharacter} 
+                                            makeActiveCharacter={this.props.makeActiveCharacter}/>
+                                    )
+                                }
+                                </div>
+                                <div className="d-flex justify-content-center">
+                                    <div className="buttonBox">
+                                        <div className="btnBackground">
+                                            <button className="btn addCharacter"
+                                                onClick={this.cancelEditCharacter}>Back</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
+                        </div>
                         :
-                            <div></div>
-                        }
-                    </div>
-                </div>
-            </div>
+                        <div className={style}>
+                            <div className="leftSide">
+                                <div className="leftTop d-flex justify-content-center">
+                                    <img className={className} src={classImage} />
+                                </div>
+                                <div className="leftBottom d-flex">
+                                    <div className="leftBottomLeft d-flex flex-column">
+                                        <div className="btnBackground">
+                                            <button type="button"
+                                                className="logoutBtn btn"
+                                                onClick={this.logoutButton}>Logout</button>
+                                        </div>
+                                    </div>
+                                    <div className="leftBottomRight d-flex justify-content-center">
+                                        <div className="btnBackground">
+                                            <button className="playButton btn">
+                                                <h2>Play</h2>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="rightSide">
+                                <div className="characterList d-flex flex-column">
+                                    <CharacterList delete={this.delete}
+                                        user={this.state.user}
+                                        characters={this.state.characters}
+                                        races={this.props.races}
+                                        classes={this.props.classes}
+                                        makeActiveCharacter={this.makeActiveCharacter}
+                                        activeCharacter={this.state.activeCharacter} />
+                                    {
+                                        (this.state.characters.length !== 8) ?
+                                            <div className="buttonBox">
+                                                <div className="d-flex justify-content-center flex-column">
+                                                    <div className="btnBackground">
+                                                        <button className="btn addCharacter"
+                                                            onClick={this.editCharacters}>Edit Characters</button>
+                                                    </div>
+                                                    <div className="editBtnBackground">
+                                                        <button className="btn addCharacter"
+                                                            onClick={this.addCharacter}>Create New Character</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            :
+                                            <div className="buttonBox">
+                                                <div className="btnBackground">
+                                                    <button className="btn addCharacter"
+                                                        onClick={this.editCharacters}>Edit Characters</button>
+                                                </div>
+                                            </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                }
+            </React.Fragment>
         )
     }
 }

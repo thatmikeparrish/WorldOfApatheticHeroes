@@ -8,7 +8,6 @@ import Dashboard from './Dashboard/Dashboard'
 import Registration from "./Registration/Registration"
 import NewCharacter from './Characters/NewCharacter'
 
-
 export default class ApplicationViews  extends Component {
     
     isAuthenticated = () => sessionStorage.getItem("user") !== null
@@ -65,7 +64,7 @@ export default class ApplicationViews  extends Component {
 
                 <Route exact path="/dashboard" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <Dashboard {...props} races={this.state.races} classes={this.state.classes}/>
+                        return <Dashboard {...props} edit={this.edit} races={this.state.races} classes={this.state.classes}/>
                     }else {
                         return <Redirect to="/login" />
                     }
@@ -78,7 +77,6 @@ export default class ApplicationViews  extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-
             </React.Fragment>
         )
     }

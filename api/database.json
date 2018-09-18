@@ -55,14 +55,6 @@
       "id": 5
     },
     {
-      "name": "awd",
-      "raceID": 5,
-      "classID": 1,
-      "level": 1,
-      "userID": 1,
-      "id": 6
-    },
-    {
       "name": "erte",
       "raceID": 4,
       "classID": 3,
@@ -71,12 +63,28 @@
       "id": 7
     },
     {
-      "name": "tyutyu",
-      "raceID": 4,
+      "name": "adasd",
+      "raceID": 6,
+      "classID": 6,
+      "level": 1,
+      "userID": 1,
+      "id": 9
+    },
+    {
+      "name": "asdasdasd",
+      "raceID": 7,
       "classID": 5,
       "level": 1,
       "userID": 1,
-      "id": 8
+      "id": 10
+    },
+    {
+      "name": "asdasd",
+      "raceID": 8,
+      "classID": 1,
+      "level": 1,
+      "userID": 1,
+      "id": 11
     }
   ],
   "races": [
