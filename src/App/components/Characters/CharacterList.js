@@ -5,11 +5,10 @@ import CharacterCard from './CharacterCard'
 
 
 export default class CharactersList extends Component {
-   
-    render() {
-        //console.log("Current User ID", this.props.user.id)
-        // const filteredCharacters = this.props.characters.filter(character => character.userID === this.props.user.id)
 
+    
+    render() { 
+        
         return (
             <React.Fragment>
 

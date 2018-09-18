@@ -8,20 +8,14 @@ export default class CharacterCard extends Component {
         const matchedRace = this.props.races.find(race => race.id === this.props.character.raceID) || {}
         const matchedClass = this.props.classes.find(c => c.id === this.props.character.classID) || {}
 
-        /* if(this.props.activeCharacter === this.props.character.id) {
-            console.log("Im active!", this.props.character.name)
-        } */
-
-        /* let activeChanges =  */
-
         return (
-            <div key={this.props.character.id} className=
-                        {
-                            (this.props.activeCharacter.id === this.props.character.id ?
+            <div key={this.props.character.id}
+                    className={
+                        (this.props.activeCharacter.id === this.props.character.id ?
                             "characterCardActive card d-flex flex-row"
-                                :
+                            :
                             "characterCard card d-flex flex-row")
-                        }
+                    }
                     onClick={() => this.props.makeActiveCharacter(this.props.character)}>
                 <div className="cardLeft">
                     <div className="characterName">
@@ -32,7 +26,7 @@ export default class CharacterCard extends Component {
                     </div>
                 </div>
                 <div className="btnBackground cardRight">
-                    <button className="btn deleteBtn" 
+                    <button className="btn deleteBtn"
                         onClick={() => this.props.delete("characters", this.props.character.id)}><span role="img" aria-label="Skull">💀</span></button>
                 </div>
             </div>
