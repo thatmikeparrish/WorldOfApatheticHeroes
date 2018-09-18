@@ -89,3 +89,81 @@
     background-color: rgba(255, 215, 0, .2);
     color: white;
 }
+
+.CharacterEdit {
+    background-image: url(../Login/img/login.jpg);
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 6rem;
+}
+
+.cardMat {
+    max-height: 47rem;
+    min-height: 47rem;
+    background-color: rgba(0, 0, 0, .5);
+    border: 3px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+    padding: 1rem;
+}
+
+.cardDeck {
+    height: 40.3rem;
+    margin-bottom: 1rem;
+}
+
+.editCard {
+    background-color: #790603;
+    color: gold;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 2px 2px #000;
+    width: 18rem;
+    height: 100%;
+    border: 3px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+    text-align: start;
+    padding-top: .5rem;
+}
+
+.editCardBackground{
+    background-color: #790603;
+    border: 5px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+    margin: 1rem;
+    max-height: 11.5rem;
+    min-height: 11.5rem;
+}
+
+.editCard:hover {
+    background-color: rgba(255, 215, 0, .2);
+    color: white;
+}
+
+.characterInfo {
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+.editName {
+
+}
+
+.characterNameBtn {
+    width: 40%;
+    background-color: #790603;
+    color: gold;
+    font-family: 'Metamorphous', cursive;
+    text-shadow: 2px 2px #000;
+    border: 3px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+    margin: 0 .5rem 0 .5rem;
+}
+
+.characterNameBtn:hover {
+    background-color: rgba(255, 215, 0, .2);
+    color: white;
+}

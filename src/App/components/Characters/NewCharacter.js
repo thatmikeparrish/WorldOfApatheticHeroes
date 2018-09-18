@@ -19,8 +19,8 @@ export default class NewCharacter extends Component {
 
     constructNewCharacter = evt => {
         evt.preventDefault()
-        if (this.state.title === "") {
-            window.alert("Please enter a task")
+        if (this.state.name === "" || this.state.race === "" || this.state.class === "") {
+            window.alert("Please enter all information")
         } else {
             const character = {
                 name: this.state.name,
