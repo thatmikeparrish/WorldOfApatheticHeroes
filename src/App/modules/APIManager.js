@@ -16,7 +16,7 @@ export default Object.create(null, {
     },
     getAllCharactersByUserID: {
         value: (userID, resources) => {
-            return fetch(`${remoteURL}/${resources}?userID=${userID}`)
+            return fetch(`${remoteURL}/${resources}?userID=${userID}&&_sort=level&_order=desc`)
             .then(e => e.json())
         }
     },
