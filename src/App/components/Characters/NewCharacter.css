@@ -1,0 +1,261 @@
+.newCharacterScreen {
+    background-image: url(../Login/img/login.jpg);
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.activeIcon {
+    border: 2px solid gold;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+}
+
+.inActiveIcon {
+    border: 2px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+}
+
+.inActiveIcon:hover {
+    border: 2px solid gold;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+}
+
+.newCharacterTop {
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+.newCharacterLeft {
+    height: 48rem;
+    min-width: 15rem;
+    max-width: 15rem;
+    margin-right: 5rem;
+}
+
+.newCharacterMiddle {
+    height: 48rem;
+    width: 90rem;
+}
+
+.newCharacterRight {
+    height: 48rem;
+    min-width: 15rem;
+    max-width: 15rem;
+    margin-left: 5rem;
+}
+
+.buttonBox2 {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnBackground2 {
+    background-color: #790603;
+    border: 5px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+    margin: 0 1rem;
+}
+
+.raceWindow {
+    width: 9.5rem;
+    min-height: 18.5rem;
+    max-height: 18.5rem;
+    background-color: rgba(0, 0, 0, .5);
+    border: 3px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+}
+
+.highElfIcon {
+    margin: .5rem;
+    background-image: url(./img/highElf.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+
+.humanIcon {
+    margin: .5rem;
+    background-image: url(./img/human.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+
+.dwarfIcon {
+    margin: .5rem;
+    background-image: url(./img/dwarf.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+
+.gnomeIcon {
+    margin: .5rem;
+    background-image: url(./img/gnome.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+
+.darkElfIcon {
+    margin: .5rem;
+    background-image: url(./img/darkElf.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+
+.orcIcon {
+    margin: .5rem;
+    background-image: url(./img/orc.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+
+.trollIcon {
+    margin: .5rem;
+    background-image: url(./img/troll.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+
+.minotaurIcon {
+    margin: .5rem;
+    background-image: url(./img/minotaur.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+
+.classImage {
+    min-width: 40rem;
+    max-width: 100rem;
+    min-height: 45rem;
+    max-height: 45rem;
+    background-color: rgba(0, 0, 0, .5);
+    border: 3px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+}
+
+.classWindow {
+    width: 4.8rem;
+    min-height: 36.5rem;
+    max-height: 36.5rem;
+    background-color: rgba(0, 0, 0, .5);
+    border: 3px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+}
+
+.gladiatorIcon {
+    margin: .5rem;
+    background-image: url(./img/gladiator.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+.crusaderIcon {
+    margin: .5rem;
+    background-image: url(./img/crusader.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+
+}
+.clericIcon {
+    margin: .5rem;
+    background-image: url(./img/cleric.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+.necromancerIcon {
+    margin: .5rem;
+    background-image: url(./img/necromancer.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+.sorcererIcon {
+    margin: .5rem;
+    background-image: url(./img/sorcerer.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+.witchDoctorIcon {
+    margin: .5rem;
+    background-image: url(./img/witchDoctor.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+.pirateIcon {
+    margin: .5rem;
+    background-image: url(./img/pirate.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
+.rangerIcon {
+    margin: .5rem;
+    background-image: url(./img/ranger.jpg);
+    background-position: center;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    min-width: 3.5rem;
+    max-width: 3.5rem;
+}
