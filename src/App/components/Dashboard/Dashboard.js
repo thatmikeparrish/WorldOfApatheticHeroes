@@ -61,6 +61,12 @@ export default class Dashboard extends Component {
             .then(returnObject => this.setState({ [resource]: returnObject }))
     }
 
+    edit = (resource, updateItem, id) => {
+        APIManager.update(resource, updateItem, id)
+            .then(() => APIManager.getAllCharactersByUserID(this.state.user.id, resource))
+            .then(returnObject => this.setState({ [resource]: returnObject }))
+    }
+
     makeActiveCharacter = (id) => {
         // console.log("active character", this.state.activeCharacter)
         this.setState({ activeCharacter: id })
@@ -130,11 +136,13 @@ export default class Dashboard extends Component {
                                         <EditCard {...this.props}
                                             key={character.id} 
                                             character={character}  
-                                            delete={this.props.delete} 
+                                            edit={this.edit}
+                                            delete={this.delete} 
                                             races={this.props.races} 
                                             classes={this.props.classes} 
                                             activeCharacter={this.props.activeCharacter} 
-                                            makeActiveCharacter={this.props.makeActiveCharacter}/>
+                                            makeActiveCharacter={this.props.makeActiveCharacter}
+                                            user={this.props.user}/>
                                     )
                                 }
                                 </div>

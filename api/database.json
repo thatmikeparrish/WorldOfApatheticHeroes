@@ -63,7 +63,7 @@
       "id": 7
     },
     {
-      "name": "adasd",
+      "name": "oogabooga",
       "raceID": 6,
       "classID": 6,
       "level": 1,
@@ -79,10 +79,10 @@
       "id": 10
     },
     {
-      "name": "asdasd",
+      "name": "asdfghjk",
       "raceID": 8,
-      "classID": 1,
-      "level": 1,
+      "classID": 4,
+      "level": 150,
       "userID": 1,
       "id": 11
     }
