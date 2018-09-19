@@ -119,7 +119,14 @@ export default class NewCharacter extends Component {
                             <div className="raceWindow d-flex flex-wrap">
                                 {
                                     this.props.races.map(race => 
-                                        <div key={race.id} className={`${race.className}Icon inActiveIcon`} onClick={() => this.makeActiveRace(race.id)}></div>
+                                        <div key={race.id} className=
+                                            {
+                                                (this.state.activeRace === race.id ?
+                                                `${race.className}Icon activeIcon`
+                                                :
+                                                `${race.className}Icon inActiveIcon`)
+                                            } 
+                                            onClick={() => this.makeActiveRace(race.id)}></div>
                                     )
                                 }
                             </div>
@@ -133,7 +140,12 @@ export default class NewCharacter extends Component {
                             <div  className="classWindow d-flex flex-wrap">
                                 {
                                     this.props.classes.map(e => 
-                                        <div key={e.id} className={`${e.className}Icon inActiveIcon`} onClick={() => this.makeActiveClass(e.id)}></div>
+                                        <div key={e.id} className={
+                                            (this.state.activeClass === e.id ?
+                                            `${e.className}Icon activeIcon`
+                                            :
+                                            `${e.className}Icon inActiveIcon`)
+                                        } onClick={() => this.makeActiveClass(e.id)}></div>
                                     )
                                 }
                             </div>
