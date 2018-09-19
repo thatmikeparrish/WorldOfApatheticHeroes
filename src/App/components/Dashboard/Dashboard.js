@@ -29,6 +29,8 @@ export default class Dashboard extends Component {
         this.setState({ user })
         APIManager.getAllCharactersByUserID(user.id, "characters")
             .then(characters => { newState.characters = characters })
+            .then(() => APIManager.getAllCharactersByUserID(user.id, "characters"))
+            .then(activeCharacter => { newState.activeCharacter = activeCharacter[0]})        
             .then(() => {
                 this.setState(newState)
             })
@@ -160,7 +162,7 @@ export default class Dashboard extends Component {
                         <div className={style}>
                             <div className="leftSide">
                                 <div className="leftTop d-flex justify-content-center">
-                                    <img className={className} src={classImage} />
+                                    <img className={className} src={classImage} alt={className}/>
                                 </div>
                                 <div className="leftBottom d-flex">
                                     <div className="leftBottomLeft d-flex flex-column">
