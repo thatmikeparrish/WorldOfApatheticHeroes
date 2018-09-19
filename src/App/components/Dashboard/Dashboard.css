@@ -99,15 +99,16 @@
 }
 
 .crusader {
-    width: 34rem;
+    width: 45rem;
 }
 
 .pirate {
-    width: 34rem;
+    width: 38rem;
 }
 
 .sorcerer {
-    width: 38rem;
+    padding-left: 7rem;
+    width: 35rem;
 }
 
 .gladiator {
@@ -116,6 +117,18 @@
 
 .ranger {
     width: 50rem;
+}
+
+.necromancer {
+    width: 33rem;
+}
+
+.cleric {
+    width: 50rem;
+}
+
+.witchDoctor {
+    width: 35rem;
 }
 
 .leftBottom {
