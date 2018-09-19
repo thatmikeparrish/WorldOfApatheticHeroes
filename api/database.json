@@ -93,6 +93,14 @@
       "level": 1,
       "userID": 2,
       "id": 12
+    },
+    {
+      "name": "wrty",
+      "raceID": 6,
+      "classID": 7,
+      "level": 1,
+      "userID": 2,
+      "id": 13
     }
   ],
   "races": [

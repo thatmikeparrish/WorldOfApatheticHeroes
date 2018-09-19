@@ -80,17 +80,17 @@ export default class Dashboard extends Component {
 
         if (this.state.activeCharacter.raceID === 1) {
             style = "highElf d-flex";
-        } else if (this.state.activeCharacter.raceID === 2) {
-            style = "human d-flex"
         } else if (this.state.activeCharacter.raceID === 3) {
-            style = "dwarf d-flex"
-        } else if (this.state.activeCharacter.raceID === 4) {
-            style = "gnome d-flex"
+            style = "human d-flex"
         } else if (this.state.activeCharacter.raceID === 5) {
-            style = "darkElf d-flex"
-        } else if (this.state.activeCharacter.raceID === 6) {
-            style = "orc d-flex"
+            style = "dwarf d-flex"
         } else if (this.state.activeCharacter.raceID === 7) {
+            style = "gnome d-flex"
+        } else if (this.state.activeCharacter.raceID === 2) {
+            style = "darkElf d-flex"
+        } else if (this.state.activeCharacter.raceID === 4) {
+            style = "orc d-flex"
+        } else if (this.state.activeCharacter.raceID === 6) {
             style = "troll d-flex"
         } else if (this.state.activeCharacter.raceID === 8) {
             style = "minotaur d-flex"
