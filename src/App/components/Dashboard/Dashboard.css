@@ -163,6 +163,16 @@
     /* margin-top: 1rem; */
 }
 
+.btnBackground3 {
+    background-color: #790603;
+    border: 5px solid rgba(80, 80, 80, .9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 0 2px rgb(0, 0, 0),
+        0 0 0 2px rgb(0, 0, 0) inset;
+    margin-top: 1rem;
+}
+
 .editBtnBackground{
     background-color: #790603;
     border: 5px solid rgba(80, 80, 80, .9);

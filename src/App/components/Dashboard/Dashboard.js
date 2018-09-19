@@ -198,7 +198,7 @@ export default class Dashboard extends Component {
                                                         <button className="btn addCharacter"
                                                             onClick={this.editCharacters}>Edit Characters</button>
                                                     </div>
-                                                    <div className="editBtnBackground">
+                                                    <div className="btnBackground3">
                                                         <button className="btn addCharacter"
                                                             onClick={this.addCharacter}>Create New Character</button>
                                                     </div>
