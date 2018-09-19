@@ -44,9 +44,6 @@ export default Object.create(null, {
     },
     update: {
         value: function (resources, updateItem, id) {
-            console.log("resources", resources)
-            console.log("updateItem", updateItem)
-            console.log("id", id)
             return fetch(`${remoteURL}/${resources}/${id}`, {
               method: "PATCH",
               headers: {
@@ -54,7 +51,6 @@ export default Object.create(null, {
               },
               body: JSON.stringify(updateItem)
            }).then(e => e.json())
-           .then(() => this.getAll(resources))
         }
      }
 })

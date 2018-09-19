@@ -41,7 +41,7 @@ export default class ApplicationViews  extends Component {
         this.setState({[resources]: data})
     })
 
-    edit = (resources, updateItem, id) => APIManager.update(resources, updateItem, id).then(data => {
+    edit = (resources, updateItem, id, userID) => APIManager.update(resources, updateItem, id, userID).then(data => {
         this.setState({[resources]: data})
     })
     
@@ -64,7 +64,7 @@ export default class ApplicationViews  extends Component {
 
                 <Route exact path="/dashboard" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <Dashboard {...props} edit={this.edit} races={this.state.races} classes={this.state.classes}/>
+                        return <Dashboard {...props} races={this.state.races} classes={this.state.classes}/>
                     }else {
                         return <Redirect to="/login" />
                     }
