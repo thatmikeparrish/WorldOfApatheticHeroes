@@ -1,9 +1,6 @@
 import React, { Component } from "react"
 import './Registration.css'
 
-/* import APIManager from '../../modules/APIManager' */
-
-
 export default class Registration extends Component {
 
     state = {
@@ -47,15 +44,25 @@ export default class Registration extends Component {
 
     render() {
         return (
-            <div className="registration">
-                <form className="registerForm" onSubmit={this.handleLogin}>
-                    <h1 className="">Register for a new account!</h1>
-                    <input className="" onChange={this.handleFieldChange} type="test" id="accountName" placeholder="Account Name" />
-                    <input className="" onChange={this.handleFieldChange} type="email" id="email" placeholder="Email" />
-                    <input className="" onChange={this.handleFieldChange} type="password" id="password" placeholder="Password" />
-                    <button className="newAccount" type="submit" onClick={this.constructNewUser}>Register</button>
-                    <button className="cancelBtn" type="button" onClick={this.cancelNewUser}>Cancel</button>
-                </form>
+            <div className="login">
+                <div className="formArea container d-flex flex-column">
+                    <h1 className="gameTitle">World Of Apathetic Heroes</h1>
+                    <form className="loginForm d-flex flex-column justify-content-center" onSubmit={this.handleLogin}>
+                        <input className="formField" onChange={this.handleFieldChange} type="test" id="accountName" placeholder="Account Name" />
+                        <br></br>
+                        <input className="formField" onChange={this.handleFieldChange} type="email" id="email" placeholder="Email" />
+                        <br></br>
+                        <input className="formField" onChange={this.handleFieldChange} type="password" id="password" placeholder="Password" />
+                        <br></br>
+                        <div className="btnBackground">
+                            <button className="newAccount btn gameBtn" type="submit" onClick={this.constructNewUser}>Register</button>
+                        </div>
+                        <br></br>
+                        <div className="btnBackground">
+                            <button className="cancelBtn btn gameBtn" type="button" onClick={this.cancelNewUser}>Cancel</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }

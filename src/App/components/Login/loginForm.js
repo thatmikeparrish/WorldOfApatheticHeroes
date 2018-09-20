@@ -41,7 +41,7 @@ export default class Login extends Component {
                 <div className="formArea container d-flex flex-column">
                     <h1 className="gameTitle">World Of Apathetic Heroes</h1>
                     <form className="loginForm d-flex flex-column justify-content-center" onSubmit={this.handleLogin}>
-                        <input className="formField" onChange={this.handleFieldChange} type="email" id="email" placeholder="Email" />
+                        <input className="formField" onChange={this.handleFieldChange} type="text" id="email" placeholder="Email" />
                         <br></br>
                         <input className="formField" onChange={this.handleFieldChange} type="password" id="password" placeholder="Password" />
                         <div className="loginBtn btnBackground">

@@ -19,7 +19,7 @@ export default class Dashboard extends Component {
     state = {
         user: null,
         characters: [],
-        activeCharacter: 0,
+        activeCharacter: {},
         edit: false
     }
 
@@ -30,7 +30,7 @@ export default class Dashboard extends Component {
         APIManager.getAllCharactersByUserID(user.id, "characters")
             .then(characters => { newState.characters = characters })
             .then(() => APIManager.getAllCharactersByUserID(user.id, "characters"))
-            .then(activeCharacter => { newState.activeCharacter = activeCharacter[0]})        
+            .then(activeCharacter => { newState.activeCharacter = activeCharacter[0] || []})        
             .then(() => {
                 this.setState(newState)
             })
@@ -70,10 +70,10 @@ export default class Dashboard extends Component {
     }
 
     makeActiveCharacter = (id) => {
-        // console.log("active character", this.state.activeCharacter)
         this.setState({ activeCharacter: id })
-
     }
+
+
 
     render() {
         let style = "dashboard d-flex"

@@ -53,6 +53,10 @@
 
 }
 
+::placeholder {
+    color: gold;
+}
+
 .formArea {
     width: 25rem;
     padding-top: 7rem;

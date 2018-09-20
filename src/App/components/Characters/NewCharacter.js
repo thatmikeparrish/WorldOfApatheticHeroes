@@ -52,12 +52,12 @@ export default class NewCharacter extends Component {
 
     makeActiveRace = (id) => {
         this.setState({ activeRace: id })
-        console.log({ activeRace: id })
+        //console.log({ activeRace: id })
     }
 
     makeActiveClass = (id) => {
         this.setState({ activeClass: id })
-        console.log({ activeClass: id })
+        //console.log({ activeClass: id })
     }
 
     render() {

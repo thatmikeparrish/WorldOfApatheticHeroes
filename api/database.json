@@ -11,6 +11,12 @@
       "email": "sh@sh.com",
       "password": "test",
       "id": 2
+    },
+    {
+      "accountName": "test",
+      "email": "test@me.com",
+      "password": "123",
+      "id": 3
     }
   ],
   "characters": [
@@ -47,14 +53,6 @@
       "id": 4
     },
     {
-      "name": "Zappyboi",
-      "raceID": 7,
-      "classID": 6,
-      "level": 1,
-      "userID": 2,
-      "id": 5
-    },
-    {
       "name": "erte",
       "raceID": 4,
       "classID": 3,
@@ -87,20 +85,12 @@
       "id": 11
     },
     {
-      "name": "roof",
-      "raceID": 8,
-      "classID": 1,
+      "name": "Zappyboi",
+      "raceID": 6,
+      "classID": 6,
       "level": 1,
       "userID": 2,
       "id": 12
-    },
-    {
-      "name": "wrty",
-      "raceID": 6,
-      "classID": 7,
-      "level": 1,
-      "userID": 2,
-      "id": 13
     }
   ],
   "races": [
