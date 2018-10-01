@@ -4,7 +4,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    padding: 1rem 1rem 0 1rem;
+    padding: 5rem 1rem 5rem 1rem;
 }
 .human {
     background-image: url(./img/humanZone.jpg);
@@ -12,7 +12,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    padding: 1rem 1rem 0 1rem;
+    padding: 5rem 1rem 5rem 1rem;
 }
 .dwarf {
     background-image: url(./img/dwarfZone.jpg);
@@ -20,7 +20,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    padding: 1rem 1rem 0 1rem;
+    padding: 5rem 1rem 5rem 1rem;
 }
 .gnome {
     background-image: url(./img/gnomeZone.jpg);
@@ -28,7 +28,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    padding: 1rem 1rem 0 1rem;
+    padding: 5rem 1rem 5rem 1rem;
 }
 .darkElf {
     background-image: url(./img/darkElfZone.jpg);
@@ -36,7 +36,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    padding: 1rem 1rem 0 1rem;
+    padding: 5rem 1rem 5rem 1rem;
 }
 .orc {
     background-image: url(./img/orcZone.jpg);
@@ -44,7 +44,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    padding: 1rem 1rem 0 1rem;
+    padding: 5rem 1rem 5rem 1rem;
 }
 .troll {
     background-image: url(./img/trollZone.jpg);
@@ -52,7 +52,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    padding: 1rem 1rem 0 1rem;
+    padding: 5rem 1rem 5rem 1rem;
 }
 .minotaur {
     background-image: url(./img/minotaurZone.jpg);
@@ -60,7 +60,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
-    padding: 1rem 1rem 0 1rem;
+    padding: 5rem 1rem 5rem 1rem;
 }
 
 .rightSide {
