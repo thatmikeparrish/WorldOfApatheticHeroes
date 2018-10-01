@@ -39,6 +39,7 @@ export default class Dashboard extends Component {
     logoutButton = () => {
         sessionStorage.removeItem("user")
         this.props.history.push("/")
+        document.webkitCancelFullScreen();
     }
 
     addCharacter = () => {
@@ -72,8 +73,6 @@ export default class Dashboard extends Component {
     makeActiveCharacter = (id) => {
         this.setState({ activeCharacter: id })
     }
-
-
 
     render() {
         let style = "dashboard d-flex"

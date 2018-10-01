@@ -35,6 +35,10 @@ export default class Login extends Component {
         this.props.history.push("/registration")
     }
 
+    fullScreen = () => {
+        document.documentElement.webkitRequestFullScreen()
+    }
+
     render() {
         return (
             <div className="login">
@@ -45,7 +49,7 @@ export default class Login extends Component {
                         <br></br>
                         <input className="formField" onChange={this.handleFieldChange} type="password" id="password" placeholder="Password" />
                         <div className="loginBtn btnBackground">
-                            <button className="gameBtn btn" type="submit">Login</button>
+                            <button className="gameBtn btn" type="submit" onClick={this.fullScreen}>Login</button>
                         </div>
                     </form>
                     <div className="registerBtn btnBackground">

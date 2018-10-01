@@ -29,7 +29,7 @@
       "id": 1
     },
     {
-      "name": "raccshot",
+      "name": "raccshotds",
       "raceID": 5,
       "classID": 8,
       "level": 10,
@@ -69,14 +69,6 @@
       "id": 9
     },
     {
-      "name": "asdasdasd",
-      "raceID": 7,
-      "classID": 5,
-      "level": 1,
-      "userID": 1,
-      "id": 10
-    },
-    {
       "name": "asdfghjk",
       "raceID": 8,
       "classID": 4,
@@ -91,6 +83,14 @@
       "level": 1,
       "userID": 2,
       "id": 12
+    },
+    {
+      "name": "Borky",
+      "raceID": 4,
+      "classID": 3,
+      "level": 1,
+      "userID": 1,
+      "id": 13
     }
   ],
   "races": [
