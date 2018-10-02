@@ -172,11 +172,11 @@ export default class Dashboard extends Component {
                                         </div>
                                     </div>
                                     <div className="leftBottomRight d-flex justify-content-center">
-                                        <div className="btnBackground">
+                                       {/*  <div className="btnBackground">
                                             <button className="playButton btn">
                                                 <h2>Play</h2>
                                             </button>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
