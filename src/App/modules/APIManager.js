@@ -9,7 +9,6 @@ export default Object.create(null, {
     },
     getAll: {
         value: function (resources) {
-            // console.log(`${remoteURL}/${resources}`)
             return fetch(`${remoteURL}/${resources}`)
             .then(e => e.json())
         }

@@ -18,7 +18,7 @@ export default class NewCharacter extends Component {
         race: "",
         class: "",
         level: "",
-        userID: "",
+        userID: this.props.user.id,
         activeRace: 1,
         activeClass: 1
     }
@@ -41,7 +41,6 @@ export default class NewCharacter extends Component {
                 level: 1,
                 userID: this.props.user.id
             }
-
             this.props.post("characters", character).then(() => this.props.history.push("/dashboard"))
         }
     }
@@ -52,12 +51,10 @@ export default class NewCharacter extends Component {
 
     makeActiveRace = (id) => {
         this.setState({ activeRace: id })
-        //console.log({ activeRace: id })
     }
 
     makeActiveClass = (id) => {
         this.setState({ activeClass: id })
-        //console.log({ activeClass: id })
     }
 
     render() {
