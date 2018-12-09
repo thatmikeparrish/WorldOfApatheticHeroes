@@ -2,26 +2,26 @@
   "users": [
     {
       "accountName": "raccscout",
-      "email": "mparrish615@gmail.com",
-      "password": "123",
+      "email": "1",
+      "password": "1",
       "id": 1
     },
     {
       "accountName": "mellven",
-      "email": "sh@sh.com",
-      "password": "test",
+      "email": "2",
+      "password": "2",
       "id": 2
     },
     {
       "accountName": "test",
-      "email": "test@me.com",
-      "password": "123",
+      "email": "3",
+      "password": "3",
       "id": 3
     }
   ],
   "characters": [
     {
-      "name": "raccscout",
+      "name": "Raccscout",
       "raceID": 2,
       "classID": 2,
       "level": 1,
@@ -29,7 +29,7 @@
       "id": 1
     },
     {
-      "name": "raccshot",
+      "name": "Raccshotsdf",
       "raceID": 5,
       "classID": 8,
       "level": 10,
@@ -45,7 +45,7 @@
       "id": 3
     },
     {
-      "name": "stabracc",
+      "name": "Stabracc",
       "raceID": 1,
       "classID": 7,
       "level": 1,
@@ -53,7 +53,7 @@
       "id": 4
     },
     {
-      "name": "erte",
+      "name": "Orcsnap",
       "raceID": 4,
       "classID": 3,
       "level": 1,
@@ -61,7 +61,7 @@
       "id": 7
     },
     {
-      "name": "oogabooga",
+      "name": "Oogabooga",
       "raceID": 6,
       "classID": 6,
       "level": 1,
@@ -69,7 +69,7 @@
       "id": 9
     },
     {
-      "name": "asdfghjk",
+      "name": "Expiredbeef",
       "raceID": 8,
       "classID": 4,
       "level": 150,
@@ -83,6 +83,14 @@
       "level": 1,
       "userID": 2,
       "id": 12
+    },
+    {
+      "name": "alfkj",
+      "raceID": 4,
+      "classID": 7,
+      "level": 1,
+      "userID": 2,
+      "id": 13
     }
   ],
   "races": [

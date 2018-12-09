@@ -39,6 +39,7 @@ export default class Dashboard extends Component {
     logoutButton = () => {
         sessionStorage.removeItem("user")
         this.props.history.push("/")
+        document.webkitCancelFullScreen();
     }
 
     addCharacter = () => {
@@ -72,8 +73,6 @@ export default class Dashboard extends Component {
     makeActiveCharacter = (id) => {
         this.setState({ activeCharacter: id })
     }
-
-
 
     render() {
         let style = "dashboard d-flex"
@@ -173,7 +172,7 @@ export default class Dashboard extends Component {
                                         </div>
                                     </div>
                                     <div className="leftBottomRight d-flex justify-content-center">
-                                        {/* <div className="btnBackground">
+                                       {/*  <div className="btnBackground">
                                             <button className="playButton btn">
                                                 <h2>Play</h2>
                                             </button>
