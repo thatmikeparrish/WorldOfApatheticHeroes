@@ -1,4 +1,4 @@
-const remoteURL = "http://localhost:8088"
+const remoteURL = "https://woah-server.herokuapp.com"
 
 export default Object.create(null, {
     get: {
@@ -9,7 +9,6 @@ export default Object.create(null, {
     },
     getAll: {
         value: function (resources) {
-            // console.log(`${remoteURL}/${resources}`)
             return fetch(`${remoteURL}/${resources}`)
             .then(e => e.json())
         }
