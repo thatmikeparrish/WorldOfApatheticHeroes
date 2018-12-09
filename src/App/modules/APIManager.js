@@ -1,4 +1,4 @@
-const remoteURL = "https://woah-server.herokuapp.com/"
+const remoteURL = "https://woah-server.herokuapp.com"
 
 export default Object.create(null, {
     get: {
