@@ -18,9 +18,14 @@ export default class NewCharacter extends Component {
         race: "",
         class: "",
         level: "",
-        userID: this.props.user.id,
+        userID: "",
         activeRace: 1,
         activeClass: 1
+    }
+
+    componentDidMount() {
+        let user = JSON.parse(sessionStorage.getItem("user"));
+        this.setState({ user })
     }
 
     handleFieldChange = evt => {
@@ -39,7 +44,7 @@ export default class NewCharacter extends Component {
                 raceID: this.state.activeRace,
                 classID: this.state.activeClass,
                 level: 1,
-                userID: this.props.user.id
+                userID: this.state.user.id
             }
             this.props.post("characters", character).then(() => this.props.history.push("/dashboard"))
         }
@@ -58,6 +63,8 @@ export default class NewCharacter extends Component {
     }
 
     render() {
+
+        console.log("current user:", this.state.user)
 
         let style = "newCharacterScreen"
 

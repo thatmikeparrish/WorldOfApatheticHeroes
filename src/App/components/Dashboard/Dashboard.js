@@ -75,6 +75,9 @@ export default class Dashboard extends Component {
     }
 
     render() {
+
+        console.log("current user:", this.state.user)
+
         let style = "dashboard d-flex"
 
         if (this.state.activeCharacter.raceID === 1) {
